@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test DraLuRadios</title>
+  <style>
+    /* Styles for the popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      display: none; /* Initially hidden */
+      justify-content: center; /* Center buttons horizontally */
+      align-items: center; /* Center buttons vertically */
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px; /* Rounded corners */
+      text-align: center; /* Center text */
+    }
+
+    .popup button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+ 
+
+  <div class="popup" id="myPopup">
+    <div class="popup-content">
+      <h2>Elige una cuenta</h2>
+      <button onclick="goToRadio('radiosdranser.html')">Radios Dranser</button>
+      <button onclick="goToRadio('radiosluni.html')">Radios Luni</button>
+    </div>
+  </div>
+
+  <script>
+    // Función para abrir el popup (ahora se ejecuta automáticamente)
+    window.onload = function() {
+      document.getElementById("myPopup").style.display = "block";
+    };
+
+    // Function to redirect to a radio station based on filename
+    function goToRadio(filename) {
+      window.location.href = filename;
+    }
+  </script>
+
+  </body>
+</html>
